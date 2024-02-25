@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP 1.1 vs 2</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>HTTP/2 vs. HTTP/1.1</header>
+    <div class="hero">
+        <div class="http1">
+            <h1>HTTP/1.1</h1>
+            <ul>
+                <li>It works on the textual format.</li>
+                <li>There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.</li>
+                <li>It uses requests resource Inlining for use getting multiple pages	</li>
+                <li>It compresses data by itself.	</li>
+            </ul>
+            
+        </div>
+        <div class="http2">
+            <h1>HTTP/2</h1>
+            <ul>
+                <li>It works on the binary protocol.
+                </li>
+                <li>It allows multiplexing so one TCP connection is required for multiple requests.
+                </li>
+                <li>It uses PUSH frame by server that collects all multiple pages 
+                </li>
+                <li>It uses HPACK for data compression.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="subhero">
+        <img src="H1v2.webp">
+        <div class="diff">
+            <div class="txt">
+                <p>
+
+                    <h1>1.1 Workflow:</h1>
+                
+                    <h3>1.Request:</h3> Client sends a request for each resource over a separate TCP connection.
+                   
+                    <h3>2.Processing:</h3> Server processes requests sequentially and sends responses back over the same connection.
+                   
+                        <h3>3.Resource Retrieval:</h3> Client parses HTML for additional resources and initiates separate requests for each.
+                
+                <h1>HTTP/2 Workflow:</h1>
+                
+                <h3>1.Request:</h3> Client sends multiple requests over a single TCP connection.
+                   
+                    <h3>2.Processing:</h3> Server processes requests concurrently, utilizing multiplexing.
+                   
+                        <h3>3.Resource Retrieval:</h3> Client receives responses in parallel, benefiting from header compression and server push for optimal resource delivery.
+                            </p>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="con">
+        <div class="txt2">
+            <h1 class="conclu">Conclusion</h1> 
+            <p>HTTP/2 offers several enhancements over HTTP/1.1, including multiplexing, header compression, and server push, which collectively improve performance, reduce latency, and enhance the user experience. By optimizing resource delivery and communication between clients and servers, HTTP/2 aims to address the limitations of its predecessor and support the evolving needs of modern web applications.
+            </p>
+        
+        </div>
+        
+    </div> 
+    <h1 class="jav">Objects and its internal representation in Javascript</h1>
+    
+</body>
+</html>
